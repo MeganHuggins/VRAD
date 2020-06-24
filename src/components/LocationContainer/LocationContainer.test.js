@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import LocationContainer from './LocationContainer';

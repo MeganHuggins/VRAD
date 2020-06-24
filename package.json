@@ -34,5 +34,6 @@
     "@testing-library/user-event": "^10.3.1",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "homepage": "https://your-heroku-app-name.heroku.com/",
 }

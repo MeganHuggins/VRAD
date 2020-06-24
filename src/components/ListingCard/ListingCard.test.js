@@ -31,7 +31,7 @@ describe('ListingCard', () => {
     }
   });
 
-  it('Should display the choosen listing infomation', () => {
+  it('Should display the chosen listing information', () => {
     const { getByText, getByLabelText } = render(
       <MemoryRouter>
         <ListingCard listingInfo={listing}/>
@@ -39,19 +39,19 @@ describe('ListingCard', () => {
     );
 
     const header = getByText('Hip RiNo Party Spot');
-    const listinInfo = getByText('Num Of Beds: 3');
-    const listingFeatures = getByText('espresso machine');
+    const listingInfo = getByText('Num Of Beds: 3');
+    const listingFeatures = getByText('ESPRESSO MACHINE');
     const favoriteBtn = getByLabelText('favorite');
 
     expect(header).toBeInTheDocument;
-    expect(listinInfo).toBeInTheDocument;
+    expect(listingInfo).toBeInTheDocument;
     expect(listingFeatures).toBeInTheDocument;
     expect(favoriteBtn).toBeInTheDocument;
   });
 
   it('Should be able to add listing to favorites', () => {
     const mockAddFavorite = jest.fn();
-    const { getByText, getByLabelText } = render(
+    const { getByLabelText } = render(
       <MemoryRouter>
         <ListingCard listingInfo={listing} addFavorite={mockAddFavorite}/>
       </MemoryRouter>

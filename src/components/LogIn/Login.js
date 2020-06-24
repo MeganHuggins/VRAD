@@ -21,7 +21,7 @@ export default class Login extends Component {
 
   handleLogIn = (e) => {
     e.preventDefault();
-    if (this.state.username && this.state.email && this.accontType !== 'Account Type') {
+    if (this.state.username && this.state.email && this.accountType !== 'Account Type') {
       this.props.setLoginInfo(this.state)
     }
   }
@@ -31,7 +31,7 @@ export default class Login extends Component {
       <div className='login-container'>
         <form onSubmit={(e) => this.handleLogIn(e)} className='login-form' action='#' method=''>
           <h1 className='login-logo'>Vrad</h1>
-          <div classNmae='form-container'>
+          <div className='form-container'>
             <div className='field'>
               <input id='username' onChange={(e) => this.handleUserInfo(e)} className='username' type='text' required placeholder='Username' value={this.state.value}></input>
             </div>
@@ -46,7 +46,7 @@ export default class Login extends Component {
                 <option value='trip'>Other</option>
               </select>
             </div>
-              <button aria-label='submit' placeholer='log-ing-btn' className='login-btn'>LOG IN</button>
+              <button aria-label='submit' placeholder='log-ing-btn' className='login-btn'>LOG IN</button>
           </div>
         </form>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import LocationContainer from './LocationContainer';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { fetchedLocations, mockAreaResponse, mockAreaInfoResponse } from '../../apiCalls';
 jest.mock('../../apiCalls')
 
@@ -49,7 +49,7 @@ describe('LocationContainer', () => {
       }
     })
 
-  it('should pass props to its chile =>> ListingCard', async () => {
+  it('should pass props to its child =>> ListingCard', async () => {
     fetchedLocations.mockResolvedValueOnce(mockLocationResponse);
 
     const { getByText } = render(
@@ -74,7 +74,7 @@ describe('LocationContainer', () => {
       </MemoryRouter>
     );
   
-    const listingPrice = await waitFor(() => getByText('hot tub'));
+    const listingPrice = await waitFor(() => getByText('HOT TUB'));
     expect(listingPrice).toBeInTheDocument();
   });
 });

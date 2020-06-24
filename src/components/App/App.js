@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Login from '../LogIn/Login';
-import { Route, Redirect, Switch } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Header from '../Header/Header.js';
 import AreaContainer from '../AreaContainer/AreaContainer.js';
 import LocationContainer from '../LocationContainer/LocationContainer.js'
-import LocationCard from '../LocationCard/LocationCard';
 import FavoritesContainer from '../FavoritesContainer/FavoritesContainer.js'
 import { fetchedAreas, fetchedAreaInfo } from '../../apiCalls';
 
@@ -135,6 +134,5 @@ class App extends Component {
     )
   }
 }
-{/* <LocationContainer currentListingId={parseInt(match.params.id)} /> */}
 
 export default App;

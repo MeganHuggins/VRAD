@@ -46,4 +46,4 @@ describe('Login', () => {
     fireEvent.click(getByLabelText('submit'))
     expect(mockLogin).toHaveBeenCalledTimes(0)
     })
-}) 
+})
